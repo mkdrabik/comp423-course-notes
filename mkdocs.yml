@@ -5,10 +5,10 @@ theme:
     - content.code.select
     - content.code.copy
     - content.code.annotate
-  # icon:
-  #   admonition:
-  #     <type>: <icon>
-
+  icon:
+    admonition:
+    note: octicons/tag-16
+    
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
