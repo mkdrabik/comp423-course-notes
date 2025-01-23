@@ -4,6 +4,12 @@
 
 * Reviewer: [Riley Warmuth](https://github.com/rileywar)
 #
+# Introduction
+In this tutorial you will learn how to set up a development container for Go completely from scratch. 
+You will also write a very basic program in order to ensure that everything is running smoothly. 
+#
+#
+
 # Prerequsites 
 
 **Install Docker:** Download and install Docker Desktop from Docker's website. [Get Docker Here](https://www.docker.com/products/docker-desktop)
@@ -23,18 +29,50 @@ cd go-dev-container
 ```
 This will create a folder for your project and set your current working directory to that folder. ```Mkdir``` creates the directory and ```cd``` moves you to that folder. 
 
-**2. Create a folder for your devcontainer:**
+
+**2. Git:**
+
+**2.1:** First initialize a new repository by runnning ```git init```.
+
+**2.2:** Then create a READ.md by typing the follow commands.
+
+```bash
+echo "# Go Dev Container" > README.md
+git add README.md
+git commit -m "Initial commit with README"
+```
+
+**2.3:** After this we want to create a remote repository for your code. So log on to GitHub and create a new public repository. 
+Then to link your remote repository to your local one add use the following command. 
+
+```bash
+git remote add origin https://github.com/<your username>/<your repository name>.git
+```
+
+**2.4:** We can add your changes to the remote repository using these commands. If your default branch name is master you can change it to main. To check the branch name run ```git branch```. To then change your branch name
+you can run the follow ```git branch -M main```.
+
+```bash
+git add .
+git commit -m 'message'
+git push --set-upstream origin main
+```
+**2.5:** Now check on GitHub to make sure that you can see your changes.
+
+#
+#
+**3. Create a folder for your devcontainer:**
 Open your project in VS Code by using Crtl+O (on mac Cmd+O) and then finding your project. 
 Once inside your project folder, create a .devcontainer directory: ```mkdir .devcontainer```
 
 
-**3. Create a devcontainer.json file in the .devcontainer folder:**
+**4. Create a devcontainer.json file in the .devcontainer folder:**
 ```bash
 touch .devcontainer/devcontainer.json
 ```
 This creates the file devcontainer.json in the .devconatiner directory.
 
-**4.Add the following configuration to the devcontainer.json file:**
+**5.Add the following configuration to the devcontainer.json file:**
 
 ```json
 {
@@ -65,11 +103,11 @@ This creates the file devcontainer.json in the .devconatiner directory.
 }
 ```
 
-**Step 5: Open the Project in the Dev Container:**
+**Step 6: Open the Project in the Dev Container:**
 Press Ctrl+Shift+P (on mac Cmd+Shift+P) and type "Dev Containers: Reopen in Container".
 VS Code will then build the container, set up the environment, and reopen your project inside the container.
 
-**Step 6: Verify the Setup:**
+**Step 7: Verify the Setup:**
 Open a terminal in VS Code and check the Go version.
 ```bash
 go version
