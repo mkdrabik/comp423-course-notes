@@ -71,7 +71,7 @@ touch .devcontainer/devcontainer.json
 ```
 This creates the file devcontainer.json in the .devconatiner directory.
 
-**5.Add the following configuration to the devcontainer.json file:**
+**5. Add the following configuration to the devcontainer.json file:**
 
 ```json
 {
