@@ -21,7 +21,7 @@ Search for Dev Containers and install the official "Remote - Containers" extensi
 # 
 
 # Part 1: Setting up your Environment
-**1.Create a folder for your project:**
+**1. Create a folder for your project:**
 Open a new window in VS Code, then open a new terminal and run the following commands.
 ```bash
 mkdir go-dev-container 
@@ -62,8 +62,11 @@ git push --set-upstream origin main
 #
 #
 **3. Create a folder for your devcontainer:**
-Open your project in VS Code by using Crtl+O (on mac Cmd+O) and then finding your project. 
-Once inside your project folder, create a .devcontainer directory: ```mkdir .devcontainer```
+Open your project in VS Code by using Crtl+O (on mac Cmd+O) and then find your project. 
+Once inside your project folder, create a .devcontainer directory: 
+```
+mkdir .devcontainer
+```
 
 
 **4. Create a devcontainer.json file in the .devcontainer folder:**
