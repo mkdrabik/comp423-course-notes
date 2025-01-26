@@ -21,7 +21,7 @@ Search for Dev Containers and install the official "Remote - Containers" extensi
 # 
 
 # Part 1: Setting up your Environment
-**1. Create a folder for your project:**
+**1.Create a folder for your project:**
 Open a new window in VS Code, then open a new terminal and run the following commands.
 ```bash
 mkdir go-dev-container 
@@ -34,7 +34,7 @@ This will create a folder for your project and set your current working director
 
 **2.1:** First initialize a new repository by runnning ```git init```.
 
-**2.2:** Then create a READ.md by typing the follow commands.
+**2.2:** Create a README.md file and commit it:
 
 ```bash
 echo "# Go Dev Container" > README.md
@@ -42,8 +42,7 @@ git add README.md
 git commit -m "Initial commit with README"
 ```
 
-**2.3:** After this we want to create a remote repository for your code. So log on to GitHub and create a new public repository. 
-Then to link your remote repository to your local one add use the following command. 
+**2.3:** Create a remote repository on GitHub and link it to your local repository:
 
 ```bash
 git remote add origin https://github.com/<your username>/<your repository name>.git
@@ -57,16 +56,13 @@ git add .
 git commit -m 'message'
 git push --set-upstream origin main
 ```
-**2.5:** Now check on GitHub to make sure that you can see your changes.
+**2.5:** Verify your changes on GitHub.
 
 #
 #
 **3. Create a folder for your devcontainer:**
-Open your project in VS Code by using Crtl+O (on mac Cmd+O) and then find your project. 
-Once inside your project folder, create a .devcontainer directory: 
-```
-mkdir .devcontainer
-```
+Open your project in VS Code (Ctrl+O or Cmd+O on Mac).
+Once inside your project folder, create a .devcontainer directory: ```mkdir .devcontainer```
 
 
 **4. Create a devcontainer.json file in the .devcontainer folder:**
@@ -124,7 +120,7 @@ go version go1.20.14 linux/arm64
 #
 # Part 2: Running Go
 
-We are now going to run a simple go program in your container.
+We are now going to run a simple Go program in your container.
 
 **Step 1: Create a Go file.**
 This can be done manually in VS Code or use the following command in your directory called "go-dev-container" (or whatever your main directory was called). 
@@ -172,7 +168,7 @@ In order to run ```go build``` we must first add a new file to our directory.
 ```go
 go mod init my-go-project
 ```
-This creates a go.mod file which manages the dependencies you are using. To to add module requirements and sums use ```go tidy```. Now that we have created a go.mod file you can run ```go build``` then run your executable file. 
+This creates a go.mod file which manages the dependencies you are using. To to add module requirements and sums use ```go mod tidy```. Now that we have created a go.mod file you can run ```go build``` then run your executable file. 
 
 ```go 
 go build main.go
